@@ -6,8 +6,36 @@
   "repository": "https://github.com/brianboyko/qi-for-classroom-backend.git",
   "author": "Brian Boyko <brian.boyko@gmail.com>",
   "license": "MIT",
+  "scripts": {
+    "build": "yarn tsc",
+    "test": "jest"
+  },
   "devDependencies": {
+    "@types/jest": "^23.3.10",
+    "jest": "^23.6.0",
+    "ts-jest": "^23.10.5",
     "tslint": "^5.12.0",
     "typescript": "^3.2.2"
+  },
+  "jest": {
+    "clearMocks": true,
+    "coverageDirectory": "coverage",
+    "globals": {
+      "ts-jest": {
+        "tsConfig": "tsconfig.json"
+      }
+    },
+    "moduleFileExtensions": [
+      "js",
+      "ts",
+      "tsx"
+    ],
+    "testEnvironment": "node",
+    "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.tsx?$",
+    "transform": {
+      "^.+\\.(ts|tsx)$": "ts-jest"
+    },
+    "preset": "ts-jest",
+    "testMatch": null
   }
 }
